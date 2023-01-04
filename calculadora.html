@@ -5,13 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+        :root{
+            --black:#000000;
+            --white: #FFFFFF;
+            --gold: #DFCE16;
+            --marron: #7D5B0C;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --xl: 22px;
+        }
+        body{
+            font-family: 'DM Sans', sans-serif;
+        }
+        .section-calculadora{
+            display: flex;
+           justify-content: center;
+
+        }
+        .calculadora {
+            font-size: var(--xl);
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--marron);
+            width: 600px;
+            height: 400px;
+            background-image: url(https://i.postimg.cc/7LG2yd1V/depositphotos-91204576-stock-photo-gold-bars-on-nugget-grains.webp);
+            color: var(--white);
+            box-sizing: border-box;
+            border-radius: 10%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .calculadora div {
+            display: grid;
+        }
+        .total{
+                display: flex !important;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 20px;
+                font-size: var(--xl);
+                font-weight: 600;
+        }
+        .total div {
+            width: 40%;
+            height: 100px;
+            margin: 0;
+            border: 4px solid var(--white);
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .total div p {
+            margin: 0;
+        }
+        .calculadora input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <section>
+    <section class="section-calculadora">
         <div class="calculadora">
-            <input type="number" name="peso" id="peso-gr">
-            <input type="number" name="precio" id="precio-gr">
-            <p class="total"></p>
+            <div class="total">
+                <div>
+                    <label for="totalD">Total dolares</label>
+                    <p type="number" name="totalD" id="total-d">20$</p>            
+                </div>
+                <div>
+                    <label for="totalB"> Total Bolivares</label>
+                    <p type="number" name="totalB" id="total-b">20 Bs</p>
+                </div>
+            </div>
+            <div>
+                <label class="label-peso-gr separador" for="peso">Peso</label>
+                <input class="input-peso-gr separador" type="number" name="peso" id="peso-gr" placeholder="">
+            </div>
+            <div>
+                <label class="label-precio-bolivares separador" for="precioB">Precio Bolivares</label>
+                <input class="input-precio-bolivares separador" type="number" name="precioB" id="precio-b">
+            </div>
+            <div>
+                <label class="label-precio-dolares" for="precioD">Precio dolares</label>
+                <input class="input-precio-dolares separador" type="number" name="precioD" id="precio-d">
+            </div>
+
         </div>
     </section>
 </body>
