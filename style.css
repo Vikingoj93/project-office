@@ -1,0 +1,166 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+        :root{
+            --black:#000000;
+            --white: #FFFFFF;
+            --gold: #DFCE16;
+            --marron: #7D5B0C;
+            --text-input-field: #F7F7F7;
+            --dark: #232830;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --xl: 22px;
+        }
+        body{
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+        }
+
+        .inactive {
+            display: none;
+        }
+
+        /*nav-bar*/
+
+        .nav-container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 0fr 2fr 0.5fr;
+            place-items: center;
+            border-bottom: 2px solid var(--marron);
+            color: var(--marron);
+        }
+        .nav-container > img{
+            padding-left: 0;
+        }
+        .logo-menu{
+            display: none;
+        }
+        .container-menu{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .container-menu ul{
+            display: grid;
+            list-style: none;
+            font-size: var(--lg);
+            grid-template-columns: 0fr 0fr 0fr;
+            place-items: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .container-menu ul li{
+            margin-left: 10px;
+        }
+        .container-menu ul li a:hover {
+            border: 1px  solid var(--marron);
+            border-radius: 5px;
+            color: var(--marron);
+        }
+        .container-menu ul li a{
+            font-size: var(--md);
+            color: var(--marron);
+            text-decoration: none;
+            padding: 8px;
+            border: 1px rgba(0, 0, 0, 0) solid;
+        }
+        .notification-container ul{
+            display: grid;
+            grid-template-columns: 1fr 0fr;
+            place-items: center;
+            font-size: var(--sm);
+            list-style: none;
+            padding: 0;
+        }
+
+        /*menu desktop*/
+
+        .desktop-menu{
+            border: 1px solid var(--marron);
+            width: 100px;
+            padding: 20px 20px 0 20px;
+            border-radius: 0px 0px 10px 10px;
+            position: absolute;
+            top: 48px;
+            right: 0;
+        }
+        .desktop-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .desktop-menu ul li {
+            text-align: end;
+        }
+        .desktop-menu ul li:last-child {
+            margin-top: 20px; 
+            border-top: 1px solid var(--marron);
+            color: var(--marron);           
+        }.desktop-menu ul li:last-child a {
+            color: var(--marron); 
+            font-size: var(--sm);         
+        }.desktop-menu ul li a{
+            color: var(--black);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* menu mobile*/
+
+
+        .mobile-menu{
+            padding: 0;
+            position: absolute;
+            right: 0;
+            border: 1px solid var(--marron);
+            border-radius: 0px 0px 10px 10px;
+        }
+        .mobile-menu a{
+            text-decoration: none;
+            padding: 24px;
+            color: var(--black);
+            font-weight: bold;
+        }
+        .mobile-menu ul{
+            margin: 24px 0px  0px;
+            padding: 0;
+            list-style: none;
+        }
+        .mobile-menu ul:nth-child(2), .mobile-menu ul:nth-child(3) {
+            margin: 24px 0px 0px;
+            padding: 24px 0px 0px;
+        }
+        .mobile-menu ul li {
+            margin-bottom: 16px;
+        }
+        .email-mobile a{
+            font-size: var(--sm);
+            font-weight: 400;
+        }
+        .sign-out a{
+            font-size: var(--sm);
+            font-weight: 600;
+            color: var(--marron);
+        }
+
+        @media (max-width: 520px){    
+            .logo-menu{
+            display: grid;
+            position: absolute;
+            right: 0;
+            }
+            .notification-container{
+                display: none;
+            }
+            .logo-cvm{
+                display: none;
+            }
+            .desktop-menu{
+                top: 24px;
+                display: none;
+            }
+        }
