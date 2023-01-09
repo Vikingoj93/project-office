@@ -147,6 +147,53 @@
             color: var(--marron);
         }
 
+        /*Calculadora*/
+
+
+        .calculadora {
+            font-size: var(--xl);
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--marron);
+            width: 600px;
+            height: 400px;
+            color: var(--black);
+            box-sizing: border-box;
+            border-radius: 10%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .calculadora div {
+            display: grid;
+        }
+        .total{
+                display: flex !important;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 20px;
+                font-size: var(--xl);
+                font-weight: 600;
+        }
+        .total div {
+            width: 40%;
+            height: 100px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .total div p {
+            margin: 0;
+        }
+        .calculadora input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            border-radius: 10px;
+        }
+
         @media (max-width: 520px){    
             .logo-menu{
             display: grid;
