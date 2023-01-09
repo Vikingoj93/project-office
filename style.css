@@ -17,9 +17,9 @@
             font-family: 'DM Sans', sans-serif;
             margin: 0;
         }
-
+        
         .inactive {
-            display: none;
+            display: none !important;
         }
 
         /*nav-bar*/
@@ -111,7 +111,6 @@
 
         /* menu mobile*/
 
-
         .mobile-menu{
             padding: 0;
             position: absolute;
@@ -147,6 +146,16 @@
             color: var(--marron);
         }
 
+        /*container section*/
+
+        .container-section {
+            display: grid;
+            width: 100%;
+            min-height: 600px;
+            justify-items: center;
+            align-items: center;
+        }
+
         /*Calculadora*/
 
 
@@ -155,11 +164,11 @@
             display: flex;
             align-items: center;
             border: 1px solid var(--marron);
+            border-radius: 10%;
             width: 600px;
             height: 400px;
             color: var(--black);
             box-sizing: border-box;
-            border-radius: 10%;
             flex-direction: column;
             justify-content: space-around;
         }
@@ -194,20 +203,69 @@
             border-radius: 10px;
         }
 
-        @media (max-width: 520px){    
-            .logo-menu{
-            display: grid;
-            position: absolute;
-            right: 0;
+        
+        /*section compra*/
+
+        .section-compra {
+            font-size: var(--xl);
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--marron);
+            border-radius: 10%;
+            width: 600px;
+            height: 400px;
+            color: var(--black);
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .registro-compra {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            border-top: 1px solid var(--marron);
+        }
+        .input-compra{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+
+        }
+        .input-compra input {
+            width: 40px;
+        }
+        .button-compra {
+            min-width: 100px;
+            height: 12px;
+            color: #fff;
+            padding: 0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            background: #343a40;
+            box-shadow: 0 5px #212529;
             }
-            .notification-container{
-                display: none;
-            }
-            .logo-cvm{
-                display: none;
-            }
-            .desktop-menu{
-                top: 24px;
-                display: none;
-            }
+        .button-compra:hover {
+            box-shadow: 0 3px #212529;
+            top: 1px;
+        }
+        .button-compra:active {
+            box-shadow: 0 0 #212529;
+            top: 5px;
+        }
+
+        .section-compra input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+            border-radius: 10px;
         }
