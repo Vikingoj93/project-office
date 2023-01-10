@@ -61,30 +61,40 @@
 
     <section class="container-section">
         <section class="section-calculadora">
-            <div class="calculadora">
+            <div class="calculadora-dolares">
                 <div class="total">
                     <div>
                         <label for="totalD">Total dolares</label>
                         <p type="number" name="totalD" id="total-d">20$</p>            
                     </div>
-                    <div>
-                        <label for="totalB"> Total Bolivares</label>
-                        <p type="number" name="totalB" id="total-b">20 Bs</p>
-                    </div>
                 </div>
                 <div>
-                    <label class="label-peso-gr separador" for="peso">Peso</label>
-                    <input class="input-peso-gr separador" type="number" name="peso" id="peso-gr" placeholder="">
-                </div>
-                <div>
-                    <label class="label-precio-bolivares separador" for="precioB">Precio Bolivares</label>
-                    <input class="input-precio-bolivares separador" type="number" name="precioB" id="precio-b">
+                    <label class="label-peso-gr" for="peso">Peso</label>
+                    <input class="input-peso-gr" type="number" name="peso" id="peso-gr" placeholder="">
                 </div>
                 <div>
                     <label class="label-precio-dolares" for="precioD">Precio dolares</label>
-                    <input class="input-precio-dolares separador" type="number" name="precioD" id="precio-d">
+                    <input class="input-precio-dolares" type="number" name="precioD" id="precio-d">
                 </div>
+            </div>
+            <div class="calculadora-bolivares">
+                <div class="total">
+                    <div>
+                        <label for="totalB">Total Bolivares</label>
+                        <p type="number" name="totalB" id="total-b">20Bs</p>
+                    </div>
+                </div>
+                <div>
+                    <label class="label-peso-gr" for="peso">Peso</label>
+                    <input class="input-peso-gr" type="number" name="peso" id="peso-gr" placeholder="">
+                </div>
+                <div>
+                    <label class="label-precio-bolivares" for="precioB">Precio Bolivares</label>
+                    <input class="input-precio-bolivares" type="number" name="precioB" id="precio-b">
+                </div>
+            </div>
         </section>
+
     
         <section class="section-compra ">
             <h1>Registros de compra - Grameado</h1>
@@ -101,6 +111,9 @@
                 <button class="button-compra" type="submit">Registrar</button>
                 
             </div>
+        </section>
+
+        <section class="section-registro">            
             <div class="registro-compra">
                 <p> peso: 1gr </p>
                 <p> precio: 48$</p>
