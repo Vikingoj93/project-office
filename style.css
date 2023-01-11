@@ -162,7 +162,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 24px;
-            width: 480px;
+            width: 580px;
             height: 260px;
             margin: 10px;
             border: 1px solid var(--marron);
@@ -241,7 +241,7 @@
             border: 1px solid var(--marron);
             border-radius: 10px;
             margin: 10px;
-            width: 480px;
+            width: 580px;
             color: var(--black);
             box-sizing: border-box;
             flex-direction: column;
@@ -253,11 +253,13 @@
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
-            border-top: 1px solid var(--marron);
+        }
+        .registro-compra p {
+            margin: 10px;
         }
         .input-compra{
             display: grid;
-            grid-template-columns: 0fr 60px 0fr 60px 0fr 60px 120px;
+            grid-template-columns: 0fr 60px 0fr 60px 1fr 112px 112px;;
             width: 100%;
             justify-items: center;
             justify-content: center;
@@ -307,7 +309,7 @@
             border: 1px solid var(--marron);
             border-radius: 10px;
             margin: 10px;
-            width: 480px;
+            width: 580px;
             color: var(--black);
             box-sizing: border-box;
             flex-direction: column;

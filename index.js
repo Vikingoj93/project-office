@@ -12,18 +12,31 @@ const totalPagado = document.querySelector("#total-pagado");
 const buttonCompra = document.querySelector("#button-compra");
 buttonCompra.addEventListener("click", registrarCompra);
 
+const registroCompra = document.querySelector(".registro-compra");
+const fechaRegistro = document.querySelector("#fecha-registro");
+const pesoRegistro = document.querySelector("#peso-registro");
+const precioRegistro = document.querySelector("#precio-registro");
+const totalRegistro = document.querySelector("#total-registro");
+
+const ListRegistro = [];
+
 const intervaloDolares = setInterval(() => {
     if(pesoDolares.value != 0){
     let resultado = calculadora(pesoDolares.value, precioDolares.value);
-    console.log(resultado);
     totalDolares.innerHTML = `${resultado.toFixed(1)}$`
 }}, 1000);
 
 const intervaloBolivares = setInterval(() => {
     if(pesoBolivares.value != 0){
     let resultado = calculadora(pesoBolivares.value, precioBolivares.value);
-    console.log(resultado);
     totalBolivares.innerHTML = `${resultado.toFixed(0)}bs`
+}}, 1000);
+
+const intervaloRegistro = setInterval(() => {
+    if(pesoCompra.value != 0){
+    let total = totalPagado;
+    let resultado = calculadora(pesoCompra.value, precioCompra.value);
+    total.innerHTML = `${resultado.toFixed(2)}$`
 }}, 1000);
 
 function calculadora(peso, precio) {
@@ -31,20 +44,12 @@ function calculadora(peso, precio) {
 }
 
 function registrarCompra() {
-    let peso = pesoCompra.value;
-    let precio = precioCompra.value;
-    let total = totalPagado;
-
+    let resultado = calculadora(pesoCompra.value, precioCompra.value);
     if(true){
-        total.innerHTML = `${()=>{return peso * precio}}$`
+        fechaRegistro.innerHTML += "01/01/2023<br>";
+        pesoRegistro.innerHTML += `${pesoCompra.value}gr <br>`;
+        precioRegistro.innerHTML += `${precioCompra.value}$ <br>`;
+        totalRegistro.innerHTML += `<strong></strong>${resultado}$</strong><br>`;
+        //ListRegistro.push(registrar)
     }
 }
-
-
-
-
-
-
-
-
-
