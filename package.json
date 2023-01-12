@@ -1,0 +1,22 @@
+{
+  "name": "project-office",
+  "version": "1.0.0",
+  "description": "proyecto registros de compra oficina de oro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vikingoj93/project-office.git"
+  },
+  "author": "arturojesus.pc@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vikingoj93/project-office/issues"
+  },
+  "homepage": "https://github.com/Vikingoj93/project-office#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
