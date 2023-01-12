@@ -44,12 +44,16 @@ function calculadora(peso, precio) {
 }
 
 function registrarCompra() {
+    let fecha = `2/2/2`
+    let peso = pesoCompra.value;
+    let precio = precioCompra.value;
     let resultado = calculadora(pesoCompra.value, precioCompra.value);
+    let total = resultado.toFixed(2);
+    ListRegistro.push({fecha, peso, precio, total});
     if(true){
         fechaRegistro.innerHTML += "01/01/2023<br>";
-        pesoRegistro.innerHTML += `${pesoCompra.value}gr <br>`;
-        precioRegistro.innerHTML += `${precioCompra.value}$ <br>`;
-        totalRegistro.innerHTML += `<strong></strong>${resultado}$</strong><br>`;
-        //ListRegistro.push(registrar)
+        pesoRegistro.innerHTML += `${peso}gr <br>`;
+        precioRegistro.innerHTML += `${precio}$ <br>`;
+        totalRegistro.innerHTML += `<strong>${total}$</strong><br>`;
     }
 }
